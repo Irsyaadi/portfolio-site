@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irsyaad Izzuddin | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --card-bg: #fff;
+      --header-bg: #1f2937;
+      --header-text: #fff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #e5e5e5;
+      --card-bg: #1e1e1e;
+      --header-bg: #000;
+      --header-text: #e5e5e5;
+    }
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg-color); color: var(--text-color); transition: all 0.3s ease; }
+    header { background: var(--header-bg); color: var(--header-text); padding: 2rem; text-align: center; }
+    nav { margin-top: 1rem; }
+    nav a { color: var(--header-text); margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    section { padding: 3rem; max-width: 1000px; margin: auto; }
+    h2 { color: var(--header-bg); border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
+    .skills, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .project-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .project-card img { width: 100%; max-width: 300px; border-radius: 8px; margin-bottom: 1rem; }
+    footer { background: var(--header-bg); color: var(--header-text); text-align: center; padding: 2rem; margin-top: 2rem; }
+    .social-links a { color: var(--header-text); margin: 0 0.5rem; text-decoration: none; }
+    .toggle-btn, .resume-btn { background: none; border: 1px solid var(--header-text); color: var(--header-text); padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; margin-top: 1rem; }
+    .resume-btn { margin-left: 1rem; }
+  </style>
+</head>
+<body data-theme="light">
+
+<header>
+  <h1>Irsyaad Izzuddin</h1>
+  <p>Freelance Software Engineer | AI Infrastructure Engineer</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark/Light</button>
+    <a class="resume-btn" href="Professional-CV-2026.pdf" download>Download CV</a>
+  </div>
+  <div class="social-links">
+    <a href="https://github.com/irsyaad" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/irsyaad" target="_blank">LinkedIn</a>
+  </div>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card project-card">
+      <img src="images/payout-system.jpg" alt="Payout System Optimization">
+      <strong>Payout System Optimization</strong>
+      <p>Real-time payout system with Kafka & Airflow → 45% latency reduction.</p>
+    </div>
+    <div class="card project-card">
+      <img src="images/llm-framework.jpg" alt="LLM Automation Framework">
+      <strong>LLM Automation Framework</strong>
+      <p>Modular AI-agent system with LangChain for research & evaluation.</p>
+    </div>
+    <div class="card project-card">
+      <img src="images/ytfy-spa.jpg" alt="YTFY SPA">
+      <strong>YTFY SPA</strong>
+      <p>Offline-first YouTube-like single-page app with playlist management.</p>
+    </div>
+    <div class="card project-card">
+      <img src="images/data-dashboard.jpg" alt="Data Analytics Dashboard">
+      <strong>Data Analytics Dashboard</strong>
+      <p>Python-based suite improving KPI decision accuracy by 30%.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:irsyaadiz.ii@gmail.com">irsyaadiz.ii@gmail.com</a></p>
+  <p>Phone: +62 95702760538</p>
+  <p>Location: Indonesia</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Irsyaad Izzuddin | Built with ❤️ and clean code</p>
+  <div class="social-links">
+    <a href="https://github.com/irsyaad" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/irsyaad" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+  function toggleTheme() {
+    const body = document.body;
+    const currentTheme = body.getAttribute("data-theme");
+    body.setAttribute("data-theme", currentTheme === "light" ? "dark" : "light");
+  }
+</script>
+
+</body>
+</html>
